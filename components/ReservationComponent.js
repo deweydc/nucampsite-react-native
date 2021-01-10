@@ -96,7 +96,6 @@ export default class Reservation extends Component {
                         title='Search'
                         color='#5637DD'
                         accessibilityLabel='Tap me to search for available campsites to reserve.'
-
                     />
                 </View>
                 <Modal
