@@ -100,18 +100,17 @@ export default class Reservation extends Component {
 
                                 'Begin Search?',
 
-                                `\nNumber of Campers ${this.state.campers}\n\nHike-In? ${this.state.hikeIn ? 'Yes' : 'No'} \n\nDate: ${this.state.date.toLocaleDateString('en-US')}`,
+                                `\nNumber of Campers: ${this.state.campers}\n\nHike-In? ${this.state.hikeIn ? 'Yes' : 'No'} \n\nDate: ${this.state.date.toLocaleDateString('en-US')}`,
 
                                 [
                                     {
                                         text: 'Cancel',
-                                        onPress: () => console.log(item.name + 'Not Deleted'),
-                                        style: 'cancel'
+                                        style: 'cancel',
+                                        onPress: () => { this.resetForm() }
                                     },
                                     {
                                         text: 'OK',
-                                        onPress: () =>
-                                            this.resetForm()
+                                        onPress: () => { this.resetForm() }
                                     },
 
                                 ],

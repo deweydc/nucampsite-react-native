@@ -43,6 +43,7 @@ function RenderCampsite(props) {
         },
         onPanResponderEnd: (e, gestureState) => {
             console.log('pan responder end', gestureState);
+            
             if (recognizeDrag(gestureState)) {
                 Alert.alert(
                     'Add Favorite',
@@ -63,7 +64,6 @@ function RenderCampsite(props) {
                 );
             } else if (recognizeComment(gestureState)) {
                 return props.onShowModal()
-
             }
             return true;
         }
